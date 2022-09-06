@@ -1,0 +1,32 @@
+@import 'colors';
+.button {
+    color: #fff;
+    border-radius: .5em;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    background-color: $main;
+    box-shadow: 5px 5px 0px 0px #000000;
+    font-weight: 600;
+    font-size:1rem;
+    cursor: pointer;
+}
+.button:hover{ background-color:#0b569d}
+.button:active { box-shadow: 3px 3px 0px 0px $textMain;}
+
+
+.dashBoardButton{
+    @extend .button;
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+    justify-content: center;
+    align-items: center;
+    width: 20rem;
+    height: 20rem;
+    box-shadow: 10px 10px 0px 0px #000000;
+    border-radius: 2em;
+    margin-left: 3rem;
+    margin-bottom: 3rem;
+}

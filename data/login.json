@@ -1,0 +1,20 @@
+{
+    "Web3Providers":[{
+        "logo":"/logos/Metamask.png",
+        "title":"Connect",
+        "titleHighlighted":"wallet",
+        "linkUrl":"/api/metamask",
+        "color":"#1178D7",
+        "backgroundColor":"#D26F00"
+    }
+
+    ],
+
+    "FaangProviders":[{
+        "logo":"/logos/google.png",
+        "title":"Connect",
+        "titleHighlighted":"AWS Cognito",
+        "linkUrl":"/api/google",
+        "color":"#008A61",
+        "backgroundColor":"#ffffff"}]
+}

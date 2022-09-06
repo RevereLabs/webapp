@@ -1,0 +1,22 @@
+<svg width="451" height="685" viewBox="0 0 451 685" fill="none" xmlns="http://www.w3.org/2000/svg">
+<mask id="mask0_389_4341" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="150" width="505" height="363">
+<path d="M0 512.662C0 312.679 162.119 150.56 362.102 150.56H504.912V512.662H0Z" fill="#D9D9D9"/>
+</mask>
+<g mask="url(#mask0_389_4341)">
+<rect x="67.4102" y="152.706" width="504.912" height="363.297" fill="#9DCEFB"/>
+<rect width="504.912" height="363.297" transform="matrix(-1 0 0 1 80.627 152.706)" fill="#9DCEFB"/>
+</g>
+<mask id="mask1_389_4341" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="152" y="15" width="559" height="499">
+<path d="M418.164 23.194C423.901 13.0116 438.563 13.0116 444.3 23.194L708.085 491.364C713.719 501.363 706.494 513.727 695.017 513.727H167.447C155.97 513.727 148.745 501.363 154.379 491.364L418.164 23.194Z" fill="#D9D9D9"/>
+</mask>
+<g mask="url(#mask1_389_4341)">
+<rect x="-0.564958" y="-2.78338" width="458.415" height="617.92" transform="matrix(-0.831336 -0.555771 0.548856 -0.835917 503.401 817.676)" stroke="black" stroke-width="4"/>
+<rect x="-0.564958" y="-2.78338" width="458.415" height="617.92" transform="matrix(-0.831336 -0.555771 0.548856 -0.835917 793.952 1011.92)" stroke="black" stroke-width="4"/>
+<rect x="-0.564958" y="-2.78338" width="458.415" height="617.92" transform="matrix(-0.831336 -0.555771 0.548856 -0.835917 695.612 946.175)" stroke="black" stroke-width="4"/>
+<rect x="-0.564958" y="-2.78338" width="458.415" height="617.92" transform="matrix(-0.831336 -0.555771 0.548856 -0.835917 244.011 1212.73)" stroke="black" stroke-width="4"/>
+<rect x="-0.564958" y="-2.78338" width="458.415" height="617.92" transform="matrix(-0.831336 -0.555771 0.548856 -0.835917 302.89 1123.06)" stroke="black" stroke-width="4"/>
+<rect x="-0.564958" y="-2.78338" width="458.415" height="617.92" transform="matrix(-0.831336 -0.555771 0.548856 -0.835917 365.35 1027.93)" stroke="black" stroke-width="4"/>
+<rect x="-0.564958" y="-2.78338" width="458.415" height="617.92" transform="matrix(-0.831336 -0.555771 0.548856 -0.835917 427.015 934.011)" stroke="black" stroke-width="4"/>
+<rect x="-0.564958" y="-2.78338" width="458.415" height="635.317" transform="matrix(-0.831336 -0.555771 0.548856 -0.835917 535.384 894.591)" stroke="black" stroke-width="4"/>
+</g>
+</svg>

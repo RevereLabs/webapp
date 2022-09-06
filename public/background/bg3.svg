@@ -1,0 +1,23 @@
+<svg width="405" height="680" viewBox="0 0 405 680" fill="none" xmlns="http://www.w3.org/2000/svg">
+<mask id="mask0_389_4385" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="-176" y="97" width="484" height="484">
+<ellipse cx="65.893" cy="339.107" rx="241.799" ry="241.798" transform="rotate(127.6 65.893 339.107)" fill="#D9D9D9"/>
+</mask>
+<g mask="url(#mask0_389_4385)">
+<rect x="-0.564958" y="-2.78338" width="497.8" height="670.89" transform="matrix(-0.831336 -0.555771 0.548856 -0.835917 109.735 803.308)" stroke="black" stroke-width="4"/>
+<rect x="-0.564958" y="-2.78338" width="497.8" height="670.89" transform="matrix(-0.831336 -0.555771 0.548856 -0.835917 425.032 1014.09)" stroke="black" stroke-width="4"/>
+<rect x="-0.564958" y="-2.78338" width="497.8" height="670.89" transform="matrix(-0.831336 -0.555771 0.548856 -0.835917 619.757 1144.27)" stroke="black" stroke-width="4"/>
+<rect x="-0.564958" y="-2.78338" width="497.8" height="670.89" transform="matrix(-0.831336 -0.555771 0.548856 -0.835917 318.317 942.751)" stroke="black" stroke-width="4"/>
+<rect x="-0.564958" y="-2.78338" width="497.8" height="670.89" transform="matrix(-0.831336 -0.555771 0.548856 -0.835917 -171.747 1232.01)" stroke="black" stroke-width="4"/>
+<rect x="-0.564958" y="-2.78338" width="497.8" height="670.89" transform="matrix(-0.831336 -0.555771 0.548856 -0.835917 -107.855 1134.7)" stroke="black" stroke-width="4"/>
+<rect x="-0.564958" y="-2.78338" width="497.8" height="670.89" transform="matrix(-0.831336 -0.555771 0.548856 -0.835917 -40.0734 1031.47)" stroke="black" stroke-width="4"/>
+<rect x="-0.564958" y="-2.78338" width="497.8" height="670.89" transform="matrix(-0.831336 -0.555771 0.548856 -0.835917 26.8427 929.552)" stroke="black" stroke-width="4"/>
+<rect x="-0.564958" y="-2.78338" width="497.8" height="689.768" transform="matrix(-0.831336 -0.555771 0.548856 -0.835917 144.442 886.774)" stroke="black" stroke-width="4"/>
+</g>
+<path d="M-81.3414 530.014C-185.754 449.605 -204.909 299.357 -124.097 194.422C-43.2853 89.4869 106.871 69.6274 211.283 150.036C315.696 230.445 334.851 380.693 254.039 485.628C173.227 590.564 23.0707 610.423 -81.3414 530.014Z" stroke="black" stroke-width="4"/>
+<mask id="mask1_389_4385" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="21" y="243" width="339" height="339">
+<circle cx="190.467" cy="412.362" r="168.934" fill="#008A61"/>
+</mask>
+<g mask="url(#mask1_389_4385)">
+<rect x="-39.6758" y="180.996" width="477.422" height="477.422" fill="#B8DED3"/>
+</g>
+</svg>

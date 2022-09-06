@@ -1,0 +1,12 @@
+@import "colors";
+.bar{
+    background-color: #96CDBD;
+    border-radius: 1rem;
+    width:10rem;
+    box-shadow: 5px 5px 0px rgba(0,0,0,1);
+    margin-right: 1rem;
+}
+.barComplete{
+    @extend .bar;
+    background-color: #008A61;
+}
