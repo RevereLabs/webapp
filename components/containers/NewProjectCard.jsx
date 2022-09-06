@@ -2,7 +2,7 @@ import axios from "axios";
 import {useRouter} from "next/router";
 import React, {useState, useEffect, useContext} from "react";
 import Image from 'next/image'
-import ChatWindow from '../ChatWindow'
+import ChatWindow from '../chat'
 import Button from '../Button'
 import {BlockchainContext} from "../../context/BlockchainContext.tsx";
 

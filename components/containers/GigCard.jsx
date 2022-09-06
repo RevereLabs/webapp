@@ -2,7 +2,7 @@ import axios from "axios";
 import React, {useState, useEffect, useContext} from "react";
 import Image from 'next/image'
 import {BlockchainContext} from "../../context/BlockchainContext.tsx";
-import ChatWindow from '../ChatWindow/index'
+import ChatWindow from '../chat/index'
 
 export default function GigCard({gigId}) {
     console.log(gigId,"gigiIS");
