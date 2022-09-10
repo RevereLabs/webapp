@@ -44,9 +44,9 @@ function Navbar() {
                 </div>
 
                 {!data?.isLoggedIn?<Button Content={'Login'}
-                    link={'/login'}/>:
+                    link={'/auth'}/>:
                     <Button Content={'Your Profile'}
-                        link={'/Profile'}/>}
+                        link={'/profile'}/>}
             </div>
     )
 }

@@ -44,7 +44,8 @@ export default function CognitoCallback() {
                                     skills: [],
                                     links: [],
                                     address : newData.user.address,
-                                    addType: newData.user.addType
+                                    addType: newData.user.addType, 
+                                    profilePic: newData.user.profilePic,
                                 });
                                 const {next, } = newData;
                                 setData({

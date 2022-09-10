@@ -17,19 +17,19 @@ function Profile({Profile}) {
 
     console.log(data, "is is data");
     const[userLinks,setUserLinks] = useState([]);
-    Profile={
-        name:data?.user?.name,
-        email: data?.user?.email,
-        profilePicture:'/profilepic.png',
-        projects: [{"title":"TestGig2", "description":"Need to Design a website", "bounty":"USD400", "time":"2 months", "completed":false,  "category": "Design"},{"title":"TestGig2", "description":"Need to Design a website", "bounty":"USD400", "time":"2 months", "completed":false,  "category": "Design"},{"title":"TestGig2", "description":"Need to Design a website", "bounty":"USD400", "time":"2 months", "completed":false,  "category": "Design"}],
-        work:[{"title":"TestGig2", "description":"Need to Design a website", "bounty":"USD400", "time":"2 months", "completed":false,  "category": "Design"},],
-        link:[],
-        Daos:[
-            {title:'odysseydao',color:'#CBA3FF'},
-            {title:'StatesDao',color:'#88BBEB'}
-        ],
+    // Profile={
+    //     name:data?.user?.name,
+    //     email: data?.user?.email,
+    //     profilePicture:'/profilepic.png',
+    //     projects: [{"title":"TestGig2", "description":"Need to Design a website", "bounty":"USD400", "time":"2 months", "completed":false,  "category": "Design"},{"title":"TestGig2", "description":"Need to Design a website", "bounty":"USD400", "time":"2 months", "completed":false,  "category": "Design"},{"title":"TestGig2", "description":"Need to Design a website", "bounty":"USD400", "time":"2 months", "completed":false,  "category": "Design"}],
+    //     work:[{"title":"TestGig2", "description":"Need to Design a website", "bounty":"USD400", "time":"2 months", "completed":false,  "category": "Design"},],
+    //     link:[],
+    //     Daos:[
+    //         {title:'odysseydao',color:'#CBA3FF'},
+    //         {title:'StatesDao',color:'#88BBEB'}
+    //     ],
 
-    }
+    // }
 
     useEffect(() => {
         axios.get(

@@ -287,7 +287,7 @@ export default function ClientChatWindow({isUserLoggedIn=false,details,isPosted,
                     Content="Login"
                     onClick={() => {
                         setData({...data, newProject: details, next: window.location.href});
-                        push('/login');
+                        push('/auth');
                     }
                     }
                 />

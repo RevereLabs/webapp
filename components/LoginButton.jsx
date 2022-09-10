@@ -21,7 +21,7 @@ function LoginButton({item,setStepsDone,stepsDone}) {
         if(typeof window !== "undefined"){
             value = window.location.origin;
         }
-        const callback_url = value + "/login/cognitocallback";
+        const callback_url = value + "/auth/cognitocallback";
         window.location = `https://reverelabs.auth.ap-south-1.amazoncognito.com/login?client_id=69li1ve6kfpq02uv7vo3fhvgb6&response_type=token&redirect_uri=${callback_url}`;
     }
 
@@ -91,51 +91,6 @@ function LoginButton({item,setStepsDone,stepsDone}) {
             login_redirect();
 
         }
-        // const result = await axios.get(APIlink)
-        // if (stepsDone === 2) {
-        //     const user = {
-        //         name: 'Vishnu Shon',
-        //         email: 'vishnu@gmail.com',
-        //         profilePicture: '/profilepic.png',
-        //         projects: [{
-        //             "title": "TestGig2",
-        //             "description": "Need to Design a website",
-        //             "bounty": "USD400",
-        //             "time": "2 months",
-        //             "completed": false,
-        //             "category": "Design"
-        //         }, {
-        //             "title": "TestGig2",
-        //             "description": "Need to Design a website",
-        //             "bounty": "USD400",
-        //             "time": "2 months",
-        //             "completed": false,
-        //             "category": "Design"
-        //         }, {
-        //             "title": "TestGig2",
-        //             "description": "Need to Design a website",
-        //             "bounty": "USD400",
-        //             "time": "2 months",
-        //             "completed": false,
-        //             "category": "Design"
-        //         }],
-        //         work: [{
-        //             "title": "TestGig2",
-        //             "description": "Need to Design a website",
-        //             "bounty": "USD400",
-        //             "time": "2 months",
-        //             "completed": false,
-        //             "category": "Design"
-        //         },],
-        //         link: [],
-        //         Daos: [
-        //             {title: 'odysseydao', color: '#CBA3FF'},
-        //             {title: 'StatesDao', color: '#88BBEB'}
-        //         ],
-        //     }
-        //     window.localStorage.setItem('user', JSON.stringify(user))
-        //     window.history.back()
-        // }
     }
 
     useEffect(() => {

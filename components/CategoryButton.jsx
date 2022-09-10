@@ -12,9 +12,9 @@ function CategoryButton({categories,setCategories}) {
             <div onClick={()=>setIsOpen(preVal=>!preVal)}
                 className="z-[10] relative  w-[10rem]  h-[2rem] flex items-center justify-around border-2 rounded-md font-mada cursor-pointer drop-shadow-[5px_5px_0px_rgba(0,0,0,1)] active:drop-shadow-[1px_1px_0px_rgba(0,0,0,1)] bg-[#ffffff]">
                 <h2 className="font-mada text-textSecondary font-[600] text-[1.2rem]">Categories</h2>
-                {isOpen?<Image src={'/upArrow.png'}
+                {isOpen?<Image src={'/vectors/upArrow.png'}
                     height={10}
-                    width={20}/>:<Image src={'/dropArrow.png'}
+                    width={20}/>:<Image src={'/vectors/dropArrow.png'}
                     height={10}
                     width={20}/>}
             </div>

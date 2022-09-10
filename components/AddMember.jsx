@@ -15,7 +15,7 @@ function AddMember() {
         <div className="absolute top-[-2rem] right-[-4rem] w-[50%] flex flex-col items-center">
             <Menu>
                 <Menu.Button className="cursor-pointer mt-10 icon">
-                    <Image src={'/plus.png'}
+                    <Image src={'/vectors/plus.png'}
                         width={20}
                         height={20}/>
                 </Menu.Button>

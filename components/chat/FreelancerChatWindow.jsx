@@ -169,7 +169,7 @@ export default function FreelancerChatWindow({isUserLoggedIn=false,details,modeT
                     Content="Login"
                     onClick={() => {
                         setData({...data, newProject: details, next: window.location.href});
-                        push('/login');
+                        push('/auth');
                     }
                     }
                 />

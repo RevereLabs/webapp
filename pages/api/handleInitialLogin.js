@@ -3,18 +3,16 @@ import {sendWelcomeEmail, sendRepeatEmail, } from "../../../functions/email.js";
 export default async function handler(req, res) {
 
     let {
-        email, name, skills, links, associations, additional, address, addType
+        email, name, skills, links, associations, additional, address, addType, profilePic
     } = req.body;
-    const [user, created] = await createOrUpdateUser(email, name, skills, links, associations, additional, address, addType);
+    const [user, created] = await createOrUpdateUser(email, name, skills, links, associations, additional, address, addType, profilePic);
     if (created) {
         sendWelcomeEmail(email, name);
     }
     else {
         sendRepeatEmail(email, name, associations);
     }
-    // this.rocketChatId = null;
-    // this.rocketChatToken = null;
-    // this.rocketChatPassword = null;
+
     name = user.get("name");
     email = user.get("email");
     skills = user.get("skills");
@@ -22,6 +20,7 @@ export default async function handler(req, res) {
     associations = user.get("associations");
     address = user.get("address");
     addType = user.get("addType");
+    profilePic = user.get("profilePic");
     const rocketChatId = user.get("rocketChatId");
     const rocketChatToken = user.get("rocketChatToken");
 
@@ -29,6 +28,6 @@ export default async function handler(req, res) {
     console.log(user, user.get());
 
 
-    res.status(200).json({ name, skills, links, associations, email, created, address, addType, "id":user.id,
+    res.status(200).json({ name, skills, links, associations, email, created, address, addType, profilePic, "id":user.id,
         rocketChatId, rocketChatToken});
 }
