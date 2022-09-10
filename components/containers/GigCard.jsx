@@ -50,7 +50,7 @@ export default function GigCard({gigId}) {
                             className="h-[3rem] mx-5  text-secondary text-[2rem]">RTN {gig.bounty}</h2>
                     </div>
                     <div className="flex  items-center text-[4rem]">
-                        <Image src={'/vectors/time.png'}
+                        <Image src={'/vectors/time.svg'}
                             alt={"image"}
                             width="60"
                             height="60"/>

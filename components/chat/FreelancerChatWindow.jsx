@@ -176,7 +176,7 @@ export default function FreelancerChatWindow({isUserLoggedIn=false,details,modeT
             </div>}
             {(application===undefined)&&(
                 <div className="bg-accent relative h-[30rem] w-[25rem] border-[0.5rem] border-[#B8DED3] rounded-md flex flex-col items-center justify-center">
-                    <Image src={'/vectors/chat.png'}
+                    <Image src={'/vectors/chat.svg'}
                         height={100}
                         alt={"df"}
                         width={100}/>
