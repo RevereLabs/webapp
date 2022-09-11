@@ -1,12 +1,11 @@
 import React from 'react'
-import ContractPortal from '../components/ContractPortal'
-import fake from '../data/fake.json'
+import AgreementPortal from '../components/AgreementPortal'
+
 function componentTester() {
   return (
     <>
-        <ContractPortal mainJSON={
-                fake
-        }/>
+        <AgreementPortal/>
+
     </>
   )
 }

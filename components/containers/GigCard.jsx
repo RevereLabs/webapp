@@ -2,8 +2,7 @@ import axios from "axios";
 import React, {useState, useEffect, useContext} from "react";
 import Image from 'next/image'
 import {BlockchainContext} from "../../context/BlockchainContext.tsx";
-import ChatWindow from '../chat/index'
-import Filter from "../others/Filter";
+import ChatWindow from '../ChatWindow/index'
 
 export default function GigCard({gigId}) {
     console.log(gigId,"gigiIS");
@@ -36,7 +35,8 @@ export default function GigCard({gigId}) {
             <div className="flex flex-col justify-around font-mada font-medium text-[3rem]  ">
                 <div className="flex flex-col h-[60%]">
                     <h2 className="mx-2 mb-1 mt-10 text-[2rem] font-mada font-[700] text-main">{gig.title}</h2>
-                    <h2 type="text" className="mx-2  text-textSecondary  text-[1.25rem] font-[600] h-[60%]">{gig.description}</h2>   
+                    <h2 type="text"
+                        className="mx-2  text-textSecondary  text-[1.25rem] font-[600] h-[60%]">{gig.description}</h2>
                 </div>
 
                 <div className="flex flex-col">
@@ -65,9 +65,6 @@ export default function GigCard({gigId}) {
                         <span className='text-main'> {!isOwner ? ownerName : "you"} </span>
                     </span>
 
-                    <span className='font-mada text-textSecondary text-[1rem]'>
-                        Category:<span className='text-secondary'>{gig.category} </span>
-                    </span>
 
                     <div className='flex items-center justify-start '>
                         <div className='cursor-pointer'

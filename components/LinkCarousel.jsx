@@ -1,6 +1,6 @@
 import React,{useState} from 'react'
 import Image from 'next/image'
-import tooltipStyle from '../styles/tooltip.module.scss'
+
 let data=[]
 function LinkCarousel({userLinks,setUserLinks}) {
 
@@ -64,8 +64,7 @@ function LinkCarousel({userLinks,setUserLinks}) {
 
 
                     (<div onClick={()=>setAddLink(preVal=>!preVal)}
-                        className={tooltipStyle.tooltip}>
-                            <p className={tooltipStyle.tooltiptext}>Add links that express yourself</p>
+                        className="w-[12rem] cursor-pointer flex justify-center mt-5">
                         <Image src={'/vectors/plus.svg'}
                             width={20}
                             height={20}/>
