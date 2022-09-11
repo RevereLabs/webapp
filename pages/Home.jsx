@@ -47,7 +47,7 @@ function Home({Projects}) {
             </div>
 
 
-            <div className="flex flex-wrap w-[90%] justify-start  relative z-0">
+            <div className="flex flex-wrap w-[100%] justify-start  relative z-0">
                 {projects?.filter(item=>filters.includes(item.category)||filters.length===1)
                     .filter(item=>item.title.toLowerCase().includes(searchParam.toLowerCase())||searchParam==='')
                     .map((project, i) =>(

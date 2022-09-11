@@ -51,8 +51,8 @@ function ContractPortal({objectId, mainJSON}) {
                 setJSON={setJSON}
             /></div>}
 
-            <button onClick={()=> {onMainSubmit()}}>
-                Submit Values
+            <button className="w-[100%] text-right pr-10 text-secondary" onClick={()=> {onMainSubmit()}}>
+                ✅ Done
             </button>
         </div>
     )

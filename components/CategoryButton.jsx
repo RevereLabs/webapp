@@ -23,7 +23,8 @@ function CategoryButton({categories,setCategories}) {
                 {categoryType.map((item, i) =>(
                     <div className="w-[90%]" onClick={() => categories == item.title?
                                         setCategories('')
-                                        :setCategories(item.title)}>
+                                        :setCategories(item.title)}
+                                        key={i}>
                         <Filter title={item.title}
                         color={item.color}
                         filters={categories}

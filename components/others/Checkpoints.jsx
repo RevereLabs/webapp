@@ -2,6 +2,7 @@ import React,{useState} from 'react'
 import Image from 'next/image'
 import TextField from '@mui/material/TextField';
 import { AdapterDateFns } from '@mui/x-date-pickers/AdapterDateFns';
+import Button from '../Button';
 
 function Checkpoints({json, setJSON}) {
     const [value, onChange] = useState(new Date());
@@ -30,22 +31,15 @@ function Checkpoints({json, setJSON}) {
                 ))}
             </div>
             <div className="w-[50%] h-[100%] flex flex-col justify-around relative">
-                <form onSubmit={(e) =>{
-                    e.preventDefault();
-                    onSubmit();
-                }}>
-                    <label> Checkpoint:</label>
-                    <input type="text"
-                        className='w-20'
-                        value={tagData?.name}
-                        onChange={(e) =>{
-                            console.log(e);
-                            setTagData({...tagData , name :e.target.value})
-                        } } />
-
-                  
-                    <button type="submit">Submit</button>
-                </form>
+                <p>Enter Checkpoint 🗓</p>
+                <input type="text"
+                    className='w-30 border-2 rounded-md border-main'
+                    value={tagData?.name}
+                    placeholder={'Develop by...'}
+                    onChange={(e) =>{
+                        setTagData({...tagData , name :e.target.value})
+                    } } />
+                <Button Content={'Submit'} onClick={onSubmit}/>
             </div>
         </div>
     )

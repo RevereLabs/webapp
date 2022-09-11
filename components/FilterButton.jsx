@@ -34,7 +34,8 @@ function FilterButton({filters,setFilters,isFilter=true}) {
                 {FilterTypes.map((item, i) =>(
                     <div className="w-[90%]" onClick={() => filters.includes(item.title)?
                                         setFilters(filters.filter(type => type!=item.title))
-                                        :setFilters([...filters,item.title])}>
+                                        :setFilters([...filters,item.title])}
+                                        key={i}>
                         <Filter title={item.title}
                         color={item.color}
                         filters={filters}

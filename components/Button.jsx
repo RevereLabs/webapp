@@ -1,7 +1,7 @@
 import React from 'react'
 import styles from '../styles/Button.module.scss'
 import Link from 'next/link';
-function Button({Content, onClick, link='',Color}) {
+function Button({Content, onClick, link='',Color='#1178D7'}) {
     console.log({Content, onClick, link,Color});
     if (link) {
         return (
