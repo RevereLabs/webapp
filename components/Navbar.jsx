@@ -14,14 +14,18 @@ function Navbar() {
     const [pageLocation,setPageLocation] =useState(router.pathname);
     const {connectedAccount, setData, data} =
     useContext(BlockchainContext);
-    useEffect(() => {
 
+
+    const Logout = () => {
+        localStorage.removeItem('userdata');
+        router.push('/');
+    }
+
+
+    useEffect(() => {
         if(data?.user?.address){
             console.log("sd");
-
-
         }
-
         const getPageLocation = () => {
             const res = router.pathname;
             setPageLocation(res);
@@ -29,6 +33,9 @@ function Navbar() {
         }
         getPageLocation();
     })
+
+
+    
     return (
             <div className="flex relative justify-between items-center  p-10 font-Mada text-[1vw] w-[100%] z-2 ">
                 <Link href="/">
@@ -43,10 +50,13 @@ function Navbar() {
                     <Link href="https://linktr.ee/reverelabs">Contact Us</Link>
                 </div>
 
-                {!data?.isLoggedIn?<Button Content={'Login'}
-                    link={'/auth'}/>:
-                    <Button Content={'Your Profile'}
-                        link={'/profile'}/>}
+                {data?.isLoggedIn?
+                    (pageLocation=='/Profile'?<Button Content={'Logout'} onClick={Logout}/>:
+                    <Button Content={'Your Profile'} link={'/Profile'}/>):
+                    (<Button Content={'Login'} link={'/login'}/>)
+                }
+
+                
             </div>
     )
 }

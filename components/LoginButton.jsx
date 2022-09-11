@@ -21,7 +21,7 @@ function LoginButton({item,setStepsDone,stepsDone}) {
         if(typeof window !== "undefined"){
             value = window.location.origin;
         }
-        const callback_url = value + "/auth/cognitocallback";
+        const callback_url = value + "/login/cognitocallback";
         window.location = `https://reverelabs.auth.ap-south-1.amazoncognito.com/login?client_id=69li1ve6kfpq02uv7vo3fhvgb6&response_type=token&redirect_uri=${callback_url}`;
     }
 

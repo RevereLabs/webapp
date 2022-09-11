@@ -5,15 +5,21 @@ import style from '../../styles/LogInCard.module.scss'
 import axios from 'axios';
 import LoginButton from '../../components/LoginButton';
 import login from '../../data/login.json'
-
 import {
     BlockchainContext,
 } from "../../context/BlockchainContext.tsx";
-function Login() {
 
+
+function Login() {
     const [profilePic,setProfilePic] = useState('https://www.pngitem.com/pimgs/m/22-223968_default-profile-picture-circle-hd-png-download.png')
     const [file,setFile] = useState();
     const imageUploader = useRef();
+    const [stepsDone,setStepsDone] = useState(1);
+    const {connectedAccount, setData, data} =
+      useContext(BlockchainContext);
+    const [name,setName] = useState('')
+    
+
 
     const uploadProfilePic = async (e) => {
         const reader = new FileReader();
@@ -28,10 +34,6 @@ function Login() {
         console.log(res)
     }
 
-    const [stepsDone,setStepsDone] = useState(1);
-    const {connectedAccount, setData, data} =
-      useContext(BlockchainContext);
-    const [name,setName] = useState('')
 
     useEffect(()=>
     {
