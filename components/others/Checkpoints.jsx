@@ -5,14 +5,14 @@ import { AdapterDateFns } from '@mui/x-date-pickers/AdapterDateFns';
 import Button from '../Button';
 
 function Checkpoints({json, setJSON}) {
-    const [value, onChange] = useState(new Date());
+    const colors = ['rgba(17, 120, 215, 0.5)','rgba(0, 138, 97, 0.5)','rgba(177, 1, 1, 0.5)','rgba(214, 200, 80, 0.5)']
     const [tagData, setTagData] = useState();
-
+    const [checkpoints,setCheckpoints] = useState(json?.checkpoints);
+    
     const onSubmit =() => {
-        console.log(json,"is here")
+        setCheckpoints([...json?.checkpoints,tagData]);
         let data = json;
         !('checkpoints' in data) && (data.checkpoints = [])
-        console.log(data," is data")
         data?.checkpoints?.push(tagData);
         setJSON(data);
     }
@@ -20,13 +20,13 @@ function Checkpoints({json, setJSON}) {
     return (
         <div className="bg-[white] h-[100%]  flex justify-between p-2">
             <div className="w-[50%] h-[100%] flex flex-col justify-start pt-5">
-                {json?.checkpoints?.map((item,i)=>(
+                {checkpoints?.map((item,i)=>(
                     <div className="flex items-center w-[12rem] text-[0.75rem] mt-2"
-                        key={i}>
+                        key={i} >
                         <p>🗓</p>
                         <div className="rounded-md px-2 mx-1"
-                        >{item.name}</div>
-                        <p className="text-secondary">{item.date}</p>
+                        style={{backgroundColor:item.color}}>
+                        {item.name}</div>
                     </div>
                 ))}
             </div>
@@ -37,7 +37,7 @@ function Checkpoints({json, setJSON}) {
                     value={tagData?.name}
                     placeholder={'Develop by...'}
                     onChange={(e) =>{
-                        setTagData({...tagData , name :e.target.value})
+                        setTagData({...tagData , name :e.target.value, color:colors[Math.floor(Math.random() * 3)]})
                     } } />
                 <Button Content={'Submit'} onClick={onSubmit}/>
             </div>
