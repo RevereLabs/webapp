@@ -10,7 +10,9 @@ function Checkpoints({json, setJSON}) {
     const [checkpoints,setCheckpoints] = useState(json?.checkpoints);
     
     const onSubmit =() => {
-        setCheckpoints([...json.checkpoints,tagData]);
+        if(json){
+            setCheckpoints([...json.checkpoints,tagData]);
+        }
         let data = json;
         !('checkpoints' in data) && (data.checkpoints = [])
         data?.checkpoints?.push(tagData);
