@@ -39,7 +39,6 @@ function FilterButton({filters,setFilters,isFilter=true}) {
                         key={i}>
                         <Filter title={item.title}
                             color={item.color}
-                            addFilter={addFilter}
                             filters={filters}
                             key={i}/>
                     </div>
