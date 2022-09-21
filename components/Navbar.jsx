@@ -50,7 +50,7 @@ function Navbar() {
                 <Link href="https://linktr.ee/reverelabs">Contact Us</Link>
                 <Link href="https://faucet.reverelabs.org">RTN Faucet</Link>
             </div>
-            <div className="flex md:hidden flex-col relative justify-center items-center p-10 font-Mada text-[1vw] w-[100%] z-2 ">
+            <div className="hidden">
                 <div className='flex flex-row justify-between items-center w-full'>
                     <Link href="/">
                         <Image src="/logo.png"
@@ -74,13 +74,18 @@ function Navbar() {
                     <Link href="https://faucet.reverelabs.org">RTN Faucet</Link>
                 </div>
 
-      {data?.isLoggedIn?
-                    (pageLocation==='/Profile'?<Button Content={'Logout'} onClick={Logout}/>:
-                    <Button Content={'Your Profile'} link={'/Profile'}/>):
-                    (<Button Content={'Login'} link={'/auth'}/>)
-                }
+
             </div>
-        </>
+
+            {data?.isLoggedIn?
+                (pageLocation==='/Profile'?<Button Content={'Logout'}
+                    onClick={Logout}/>:
+                    <Button Content={'Your Profile'}
+                        link={'/Profile'}/>):
+                (<Button Content={'Login'}
+                    link={'/auth'}/>)
+            }
+        </div>
 
     )
 }
