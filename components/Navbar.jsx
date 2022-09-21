@@ -50,14 +50,22 @@ function Navbar() {
                 <Link href="https://linktr.ee/reverelabs">Contact Us</Link>
             </div>
 
-            {data?.isLoggedIn?
+                </div>
+                <div className="flex justify-between w-full mt-10 text-textMain text-[1rem] cursor-pointer">
+                    <Link href="/"><span style={pageLocation === '/' ? { color: "#1178D7" } : {}}>Home</span></Link>
+                    <Link href="/gig/create"><span style={pageLocation === '/gig/create' ? { color: "#1178D7" } : {}}>Post Gig</span></Link>
+                    <Link href="https://linktr.ee/reverelabs">Contact Us</Link>
+                    <Link href="https://faucet.reverelabs.org">RTN Faucet</Link>
+                </div>
+
+      {data?.isLoggedIn?
                     (pageLocation==='/Profile'?<Button Content={'Logout'} onClick={Logout}/>:
                     <Button Content={'Your Profile'} link={'/Profile'}/>):
                     (<Button Content={'Login'} link={'/auth'}/>)
                 }
+            </div>
+        </>
 
-
-        </div>
     )
 }
 
