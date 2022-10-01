@@ -2,9 +2,9 @@ import { bytecode, abi } from "./abi.js";
 import { ethers } from "ethers";
 import { abi  as RNFT_abi} from "./RNFT_abi";
 import { abi  as RTN_abi} from "./RTN_abi";
-const RGCNFTAddress = "0xBFC1B47Ce51167909B152f1fc38fbD865f552845";
-const RNFTAddress = "0x700ec5d532b424e75f4142caa4092e8551aedf84";
-const RTNAddress ="0x78BEA5a0907744CDd8b722038B5F15351dD9aF27";
+const RGCNFTAddress = "0x2266446cDc69fcD5a9c0c79D30506f67644E2610";
+const RNFTAddress = "0xe1f74C2D2bACb54eA5EdC8b4C564B2C0eFfd2457";
+const RTNAddress ="0xeFC553cD055bE95986EE3613AE11647Ed69a6b94";
 async function deployContract(provider, checkpoints, freelancer, clientAmount, freelancerStake, freelancerCompensationIfClientCancels) {
     console.log(provider,checkpoints,freelancer,clientAmount,freelancerStake,freelancerCompensationIfClientCancels, "is important");
 
