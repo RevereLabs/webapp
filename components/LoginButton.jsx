@@ -26,7 +26,7 @@ function LoginButton({item,setStepsDone,stepsDone}) {
     }
 
     async function handleCheck() {
-        let chainId = 80001;
+        let chainId = 1001;
 
         if (window.ethereum.networkVersion !== chainId) {
             try {
@@ -43,15 +43,15 @@ function LoginButton({item,setStepsDone,stepsDone}) {
                         method: "wallet_addEthereumChain",
                         params: [
                             {
-                                chainName: "Mumbai Testnet",
+                                chainName: "Klaytn Baobab",
                                 chainId: web3.utils.toHex(chainId),
                                 nativeCurrency: {
-                                    name: "MATIC",
+                                    name: "KLAY",
                                     decimals: 18,
-                                    symbol: "MATIC",
+                                    symbol: "KLAY",
                                 },
-                                rpcUrls: ["https://rpc-mumbai.maticvigil.com/"],
-                                blockExplorerUrls: ["https://polygonscan.com/"],
+                                rpcUrls: ["https://api.baobab.klaytn.net:8651/"],
+                                blockExplorerUrls: ["https://baobab.scope.klaytn.com/"],
                             },
                         ],
                     });
