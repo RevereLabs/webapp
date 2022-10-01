@@ -46,13 +46,14 @@ export default function ClientChatWindow({isUserLoggedIn=false,details,isPosted,
     useEffect(() => {
         if (!people)
             return;
+        setPeopleDets([]);
         const ss = async () => {let q= [];
             for ( let i = 0; i<people?.length;i++){
                 const res = await axios.get(`/api/profile/fetch?objectId="${people[i]?.applicantId}"`);//.then((res) => {
                 q=[...q, res.data[0]];
                 q[q.length-1].rocketChatId = people[i].rocketChatChannelId;
+                setPeopleDets(q);
             }
-            setPeopleDets(q);
         };
         ss();
     },[people])
@@ -253,7 +254,7 @@ export default function ClientChatWindow({isUserLoggedIn=false,details,isPosted,
                         <option
                             value={null}>Select</option>
                         { peopleDets?.map((person,index)=> {
-                            console.log(people[index].rocketChatChannelName," poi person");
+                            console.log(index, person?.name, " poi person");
                             return(
                                 <option key={index}
                                     value={index}>{person?.name}
