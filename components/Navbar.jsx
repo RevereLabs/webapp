@@ -37,17 +37,19 @@ function Navbar() {
 
 
     return (
-        <div className="flex relative justify-between items-center  p-10 font-Mada text-[1vw] w-[100%] z-2 ">
-            <Link href="/">
-                <Image src="/logo.png"
-                    width={120}
-                    height={60}/>
-            </Link>
-            {/* login && (<></>) */}
-            <div className="flex justify-between w-[25%] text-textMain text-[1rem] small:hidden cursor-pointer">
-                <Link href="/"><span  style={pageLocation==='/'?{color:"#1178D7"}:{}}>Home</span></Link>
-                <Link href="/gig/create"><span  style={pageLocation==='/gig/create'?{color:"#1178D7"}:{}}>Post Gig</span></Link>
-                <Link href="https://linktr.ee/reverelabs">Contact Us</Link>
+        <>
+            <div className="hidden md:flex relative justify-between items-center  p-10 font-Mada text-[1vw] w-[100%] z-2 ">
+                <Link href="/">
+                    <Image src="/logo.png"
+                        width={120}
+                        height={60}
+                        alt="logo" />
+                </Link>
+                {/* login && (<></>) */}
+                <div className="flex justify-between w-[25%] text-textMain text-[1rem] small:hidden cursor-pointer">
+                    <Link href="/"><span style={pageLocation === '/' ? { color: "#1178D7" } : {}}>Home</span></Link>
+                    <Link href="/gig/create"><span style={pageLocation === '/gig/create' ? { color: "#1178D7" } : {}}>Post Gig</span></Link>
+                    <Link href="https://linktr.ee/reverelabs">Contact Us</Link>
                 <Link href="https://faucet.reverelabs.org">RTN Faucet</Link>
             </div>
             <div className="hidden">
@@ -75,7 +77,7 @@ function Navbar() {
                 </div>
 
 
-            </div>
+                </div>
 
             {data?.isLoggedIn?
                 (pageLocation==='/Profile'?<Button Content={'Logout'}

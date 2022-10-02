@@ -44,7 +44,7 @@ function NewProjectCard() {
     }, [setData, ])
 
     return (
-        <div className="flex relative z-2 justify-between px-10 py-12 h-[36rem] w-[60rem] bg-[#ffffff]  border-4 rounded-[5px] drop-shadow-[10px_10px_0px_rgba(0,0,0,1)]">
+        <div className="flex flex-col md:flex-row relative z-2 justify-between px-14 md:px-10 py-12 h-[72rem] md:h-[36rem] w-[30rem] md:w-[60rem] bg-[#ffffff]  border-4 rounded-[5px] drop-shadow-[10px_10px_0px_rgba(0,0,0,1)]">
             <div className="flex flex-col justify-around font-mada font-medium text-[3rem]  ">
                 <div className="flex flex-col h-[60%]">
                     <input type="text"

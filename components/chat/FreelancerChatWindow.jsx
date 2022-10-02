@@ -175,7 +175,7 @@ export default function FreelancerChatWindow({isUserLoggedIn=false,details,modeT
                 />
             </div>}
             {(application===undefined)&&(
-                <div className="bg-accent relative h-[30rem] w-[25rem] border-[0.5rem] border-[#B8DED3] rounded-md flex flex-col items-center justify-center">
+                <div className="bg-accent relative h-[30rem] w-[22rem] md:w-[25rem] border-[0.5rem] border-[#B8DED3] rounded-md flex flex-col items-center justify-center">
                     <Image src={'/vectors/chat.svg'}
                         height={100}
                         alt={"df"}
@@ -187,7 +187,7 @@ export default function FreelancerChatWindow({isUserLoggedIn=false,details,modeT
                 </div>)
             }
             {(application!==undefined)&&(!modeToggle?(
-                <div className="bg-accent relative h-[30rem] w-[25rem] border-[0.5rem] border-[#B8DED3] rounded-md flex flex-col items-center justify-center">
+                <div className="bg-accent relative h-[30rem] w-[22rem] md:w-[25rem] border-[0.5rem] border-[#B8DED3] rounded-md flex flex-col items-center justify-center">
                     <Chat userToken={data?.user?.rocketChatToken}
                         otherUserToken={application.rocketChatChannelName}/>
                 </div>):(application.status!=="contract"?<ContractPortal objectId={application.objectId}
