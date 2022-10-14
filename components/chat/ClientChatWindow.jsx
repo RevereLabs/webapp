@@ -46,13 +46,14 @@ export default function ClientChatWindow({isUserLoggedIn=false,details,isPosted,
     useEffect(() => {
         if (!people)
             return;
+        setPeopleDets([]);
         const ss = async () => {let q= [];
             for ( let i = 0; i<people?.length;i++){
                 const res = await axios.get(`/api/profile/fetch?objectId="${people[i]?.applicantId}"`);//.then((res) => {
                 q=[...q, res.data[0]];
                 q[q.length-1].rocketChatId = people[i].rocketChatChannelId;
+                setPeopleDets(q);
             }
-            setPeopleDets(q);
         };
         ss();
     },[people])
@@ -234,7 +235,7 @@ export default function ClientChatWindow({isUserLoggedIn=false,details,isPosted,
     }
     return (
         <div className="relative z-10">
-            {people?.length===0&&<div className="bg-accent relative h-[30rem] w-[25rem] border-[0.5rem] border-[#B8DED3] rounded-md flex flex-col items-center justify-center">
+            {people?.length===0&&<div className="bg-accent relative h-[30rem] w-[22rem] md:w-[25rem] border-[0.5rem] border-[#B8DED3] rounded-md flex flex-col items-center justify-center">
                 <Image src={'/vectors/chat.svg'}
                     height={100}
                     alt={"df"}
@@ -253,7 +254,7 @@ export default function ClientChatWindow({isUserLoggedIn=false,details,isPosted,
                         <option
                             value={null}>Select</option>
                         { peopleDets?.map((person,index)=> {
-                            console.log(people[index].rocketChatChannelName," poi person");
+                            console.log(index, person?.name, " poi person");
                             return(
                                 <option key={index}
                                     value={index}>{person?.name}

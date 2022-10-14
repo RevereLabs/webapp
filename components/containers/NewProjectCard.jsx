@@ -2,13 +2,15 @@ import axios from "axios";
 import {useRouter} from "next/router";
 import React, {useState, useEffect, useContext} from "react";
 import Image from 'next/image'
-import ChatWindow from '../ChatWindow'
+import ChatWindow from '../chat'
 import Button from '../Button'
 import {BlockchainContext} from "../../context/BlockchainContext.tsx";
+import CategoryButton from '../CategoryButton'
+
 
 function NewProjectCard() {
     const {data, setData} = useContext(BlockchainContext);
-
+    const [categories,setCategories] = useState('');
     const [details,setDetails] = useState({title:'',description:'',bounty:'',time:''});
     const {title,description,bounty,time} = details;
 
@@ -21,7 +23,7 @@ function NewProjectCard() {
             bounty,
             time,
             issuedBy: data.user.id,
-            category: "Hardcoded",
+            category: categories,
         }).then((res) => {
             push(`/gig/view/${res.data.id}`)
         })
@@ -42,7 +44,7 @@ function NewProjectCard() {
     }, [setData, ])
 
     return (
-        <div className="flex relative z-2 justify-between px-10 py-12 h-[36rem] w-[60rem] bg-[#ffffff]  border-4 rounded-[5px] drop-shadow-[10px_10px_0px_rgba(0,0,0,1)]">
+        <div className="flex flex-col md:flex-row relative z-2 justify-between px-14 md:px-10 py-12 h-[72rem] md:h-[36rem] w-[30rem] md:w-[60rem] bg-[#ffffff]  border-4 rounded-[5px] drop-shadow-[10px_10px_0px_rgba(0,0,0,1)]">
             <div className="flex flex-col justify-around font-mada font-medium text-[3rem]  ">
                 <div className="flex flex-col h-[60%]">
                     <input type="text"
@@ -86,8 +88,9 @@ function NewProjectCard() {
                             value={time}
                             onChange={(e)=>setDetails({...details, time: e.target.value})}></input>
                     </div>
-                    <div>
+                    <div className='flex w-[100%] mt-5 text-[1rem] items-center'>
                         <Button Content={'Post Gig'} onClick={postGigHandler}/>
+                        <CategoryButton categories={categories} setCategories={setCategories}/>
                     </div>
                 </div>
             </div>

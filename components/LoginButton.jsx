@@ -21,12 +21,12 @@ function LoginButton({item,setStepsDone,stepsDone}) {
         if(typeof window !== "undefined"){
             value = window.location.origin;
         }
-        const callback_url = value + "/login/cognitocallback";
-        window.location = `https://reverelabs.auth.ap-south-1.amazoncognito.com/login?client_id=69li1ve6kfpq02uv7vo3fhvgb6&response_type=token&redirect_uri=${callback_url}`;
+        const callback_url = value + "/auth/cognitocallback";
+        window.location = `https://reverelabs.auth.ap-south-1.amazoncognito.com/oauth2/authorize?client_id=69li1ve6kfpq02uv7vo3fhvgb6&response_type=token&redirect_uri=${callback_url}`;
     }
 
     async function handleCheck() {
-        let chainId = 80001;
+        let chainId = 1001;
 
         if (window.ethereum.networkVersion !== chainId) {
             try {
@@ -43,15 +43,15 @@ function LoginButton({item,setStepsDone,stepsDone}) {
                         method: "wallet_addEthereumChain",
                         params: [
                             {
-                                chainName: "Mumbai Testnet",
+                                chainName: "Klaytn Baobab",
                                 chainId: web3.utils.toHex(chainId),
                                 nativeCurrency: {
-                                    name: "MATIC",
+                                    name: "KLAY",
                                     decimals: 18,
-                                    symbol: "MATIC",
+                                    symbol: "KLAY",
                                 },
-                                rpcUrls: ["https://rpc-mumbai.maticvigil.com/"],
-                                blockExplorerUrls: ["https://polygonscan.com/"],
+                                rpcUrls: ["https://api.baobab.klaytn.net:8651/"],
+                                blockExplorerUrls: ["https://baobab.scope.klaytn.com/"],
                             },
                         ],
                     });

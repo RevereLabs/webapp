@@ -17,11 +17,11 @@ module.exports = {
         fontFamily:{
             mada:['Mada', 'sans-serif'],
         },
-        screens: {
-            'small':{
-                'max':'800px'
-            }
-        },
+        // screens: {
+        //     'small':{
+        //         'max':'800px'
+        //     }
+        // },
     },
     variants: {
         display:['group-hover']
