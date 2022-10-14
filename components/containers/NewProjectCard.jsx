@@ -2,15 +2,13 @@ import axios from "axios";
 import {useRouter} from "next/router";
 import React, {useState, useEffect, useContext} from "react";
 import Image from 'next/image'
-import ChatWindow from '../chat'
+import ChatWindow from '../ChatWindow'
 import Button from '../Button'
 import {BlockchainContext} from "../../context/BlockchainContext.tsx";
-import CategoryButton from '../CategoryButton'
-
 
 function NewProjectCard() {
     const {data, setData} = useContext(BlockchainContext);
-    const [categories,setCategories] = useState('');
+
     const [details,setDetails] = useState({title:'',description:'',bounty:'',time:''});
     const {title,description,bounty,time} = details;
 
@@ -23,7 +21,7 @@ function NewProjectCard() {
             bounty,
             time,
             issuedBy: data.user.id,
-            category: categories,
+            category: "Hardcoded",
         }).then((res) => {
             push(`/gig/view/${res.data.id}`)
         })
@@ -88,9 +86,8 @@ function NewProjectCard() {
                             value={time}
                             onChange={(e)=>setDetails({...details, time: e.target.value})}></input>
                     </div>
-                    <div className='flex w-[100%] mt-5 text-[1rem] items-center'>
+                    <div>
                         <Button Content={'Post Gig'} onClick={postGigHandler}/>
-                        <CategoryButton categories={categories} setCategories={setCategories}/>
                     </div>
                 </div>
             </div>

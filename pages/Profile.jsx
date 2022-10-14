@@ -10,26 +10,24 @@ import {
 import axios from "axios"
 
 function Profile({Profile}) {
-    const { data} =
+    const {data} =
     useContext(BlockchainContext);
-
     const [ gigs , setGigs] = useState([]);
-
-    console.log(data, "is is data");
     const[userLinks,setUserLinks] = useState([]);
-    // Profile={
-    //     name:data?.user?.name,
-    //     email: data?.user?.email,
-    //     profilePicture:'/profilepic.png',
-    //     projects: [{"title":"TestGig2", "description":"Need to Design a website", "bounty":"USD400", "time":"2 months", "completed":false,  "category": "Design"},{"title":"TestGig2", "description":"Need to Design a website", "bounty":"USD400", "time":"2 months", "completed":false,  "category": "Design"},{"title":"TestGig2", "description":"Need to Design a website", "bounty":"USD400", "time":"2 months", "completed":false,  "category": "Design"}],
-    //     work:[{"title":"TestGig2", "description":"Need to Design a website", "bounty":"USD400", "time":"2 months", "completed":false,  "category": "Design"},],
-    //     link:[],
-    //     Daos:[
-    //         {title:'odysseydao',color:'#CBA3FF'},
-    //         {title:'StatesDao',color:'#88BBEB'}
-    //     ],
+    
+    Profile={
+        name:data?.user?.name,
+        email: data?.user?.email,
+        profilePicture:data?.user?.profilePic,
+        projects: [{"title":"TestGig2", "description":"Need to Design a website", "bounty":"USD400", "time":"2 months", "completed":false,  "category": "Design"},{"title":"TestGig2", "description":"Need to Design a website", "bounty":"USD400", "time":"2 months", "completed":false,  "category": "Design"},{"title":"TestGig2", "description":"Need to Design a website", "bounty":"USD400", "time":"2 months", "completed":false,  "category": "Design"}],
+        work:[{"title":"TestGig2", "description":"Need to Design a website", "bounty":"USD400", "time":"2 months", "completed":false,  "category": "Design"},],
+        link:[],
+        Daos:[
+            {title:'odysseydao',color:'#CBA3FF'},
+            {title:'StatesDao',color:'#88BBEB'}
+        ],
 
-    // }
+    }
 
     useEffect(() => {
         axios.get(
@@ -49,7 +47,6 @@ function Profile({Profile}) {
 
     }, [data?.user?.id] )
 
-    console.log(gigs);
     return (
         <div className={styles.container}>
             <div className="fixed z-0 top-[5vh] left-0"><Image src="/background/bg3.svg"
@@ -66,14 +63,13 @@ function Profile({Profile}) {
                 width="700" /></div>
 
             <div className="relative z-2 w-[100%] flex flex-col items-center text-center">
-                <a className="drop-shadow-[5px_5px_0px_rgba(0,0,0,1)] ">
-                    <Image src={Profile.profilePicture}
+                <a className="drop-shadow-[5px_5px_0px_rgba(0,0,0,1)] flex justify-center">
+                    <img src={data?.user?.profilePic}
                         alt={"s"}
-                        width="200"
-                        height="200"/>
+                        className='h-[30%] w-[30%] rounded-full'/>
                 </a>
 
-                <h2 className="text-main font-mada font-[700] text-[5rem]">{Profile.name}</h2>
+                <h2 className="text-main font-mada font-[700] text-[5rem]">{data?.user?.name}</h2>
 
                 <div className='flex text-textMain font-mada font-[500]'>
                     <span className="mx-2">
